@@ -1,0 +1,505 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: gustavo siqueira marquardt, unifei, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\faculdade\SO_EMBARCADO\laboratorio\LAB05\basePJ.uvprojx
+Project File Date:  07/01/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+Thread.c(2): warning: // comments are not allowed in this language [-Wcomment]
+#include "cmsis_os.h"                                           // CMSIS RTOS header file
+                                                                ^
+Thread.c(2): warning: In file included from...
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(48): warning: // comments are not allowed in this language [-Wcomment]
+#define osCMSIS           0x10002U     ///< CMSIS-RTOS API version (main [31:16] .sub [15:0])
+                                       ^
+Thread.c(10): warning: no previous extern declaration for non-static variable 'os_thread_def_Thread' [-Wmissing-variable-declarations]
+osThreadDef (Thread, osPriorityNormal, 1, 0);                   // thread object
+^
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(277): note: expanded from macro 'osThreadDef'
+const osThreadDef_t os_thread_def_##name = \
+                    ^
+<scratch space>(2): note: expanded from here
+os_thread_def_Thread
+^
+Thread.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(277): note: expanded from macro 'osThreadDef'
+const osThreadDef_t os_thread_def_##name = \
+      ^
+Thread.c(12): warning: no previous prototype for function 'Init_Thread' [-Wmissing-prototypes]
+int Init_Thread (void) {
+    ^
+Thread.c(12): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int Init_Thread (void) {
+^
+static 
+Thread.c(23): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    ; // Insert thread code here...
+    ^~
+Thread.c(20): warning: unused parameter 'argument' [-Wunused-parameter]
+void Thread (void const *argument) {
+                         ^
+Thread.c(20): warning: function 'Thread' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void Thread (void const *argument) {
+                                   ^
+Thread.c(9): warning: no previous extern declaration for non-static variable 'tid_Thread' [-Wmissing-variable-declarations]
+osThreadId tid_Thread;                                          // thread id
+           ^
+Thread.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+osThreadId tid_Thread;                                          // thread id
+^
+8 warnings generated.
+compiling Thread.c...
+assembling startup_stm32f10x_md.s...
+RTE/CMSIS/RTX_Conf_CM.c(26): warning: In file included from...
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(48): warning: // comments are not allowed in this language [-Wcomment]
+#define osCMSIS           0x10002U     ///< CMSIS-RTOS API version (main [31:16] .sub [15:0])
+                                       ^
+RTE/CMSIS/RTX_Conf_CM.c(33): warning: // comments are not allowed in this language [-Wcomment]
+//-------- <<< Use Configuration Wizard in Context Menu >>> -----------------
+^
+RTE/CMSIS/RTX_Conf_CM.c(300): warning: In file included from...
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\RTX_CM_lib.h(404): warning: cast from 'int (*)(void)' to 'os_pthread' (aka 'void (*)(const void *)') converts to incompatible function type [-Wcast-function-type]
+const osThreadDef_t os_thread_def_main = {(os_pthread)main, osPriorityNormal, 1U, 4*OS_MAINSTKSIZE };
+                                          ^~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling RTX_Conf_CM.c...
+RTE/Device/STM32F103C8/system_stm32f10x.c(64): warning: In file included from...
+C:/Users/gusta/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/gusta/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/gusta/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+4 warnings generated.
+compiling system_stm32f10x.c...
+main.c(1): warning: non-portable path to file '"stm32f10x.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "STM32F10x.h"
+         ^~~~~~~~~~~~~
+         "stm32f10x.h"
+main.c(1): warning: In file included from...
+C:/Users/gusta/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\STM32F10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/gusta/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\STM32F10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/gusta/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\STM32F10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(2): warning: In file included from...
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(48): warning: // comments are not allowed in this language [-Wcomment]
+#define osCMSIS           0x10002U     ///< CMSIS-RTOS API version (main [31:16] .sub [15:0])
+                                       ^
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(73): warning: '__NO_RETURN' macro redefined [-Wmacro-redefined]
+#define __NO_RETURN __attribute__((noreturn))
+        ^
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include/cmsis_armclang.h(46): note: previous definition is here
+  #define __NO_RETURN                            __attribute__((__noreturn__))
+          ^
+main.c(4): warning: // comments are not allowed in this language [-Wcomment]
+//Pin definition
+^
+main.c(44): warning: no previous extern declaration for non-static variable 'val01_delay' [-Wmissing-variable-declarations]
+int val01_delay = 1000000;
+    ^
+main.c(44): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int val01_delay = 1000000;
+^
+main.c(45): warning: no previous extern declaration for non-static variable 'val02_delay' [-Wmissing-variable-declarations]
+int val02_delay = 1000000;
+    ^
+main.c(45): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int val02_delay = 1000000;
+^
+main.c(56): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                ;
+                ^
+main.c(50): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+void delay (unsigned int count)
+     ^
+main.c(50): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay (unsigned int count)
+^
+static 
+main.c(63): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint16_t i = 0; i < t; i++)
+            ^
+main.c(63): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(60): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms(uint16_t t)
+     ^
+main.c(60): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms(uint16_t t)
+^
+static 
+main.c(72): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint16_t i = 0; i < t; i++)
+            ^
+main.c(72): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(69): warning: no previous prototype for function 'delay_us' [-Wmissing-prototypes]
+void delay_us(uint16_t t)
+     ^
+main.c(69): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_us(uint16_t t)
+^
+static 
+main.c(87): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        GPIOA->BSRR = ((aux&0x0008)<<8) | ((aux&0x0004)<<3) | ((aux&0x0002)<<5) | ((aux&0x0001)<<8);
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+main.c(94): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~ (1<<LCD_EN);    /* EN = 0 for H-to-L pulse */
+                   ~~ ^~~~~~~~~~~~~
+main.c(101): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        GPIOA->BSRR = ((aux&0x0008)<<8) | ((aux&0x0004)<<3) | ((aux&0x0002)<<5) | ((aux&0x0001)<<8);
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+main.c(110): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOA->ODR &= ~(1<<LCD_EN);   /* EN = 0 for H-to-L pulse */
+             ~~ ^~~~~~~~~~~~
+main.c(79): warning: no previous prototype for function 'lcd_putValue' [-Wmissing-prototypes]
+void lcd_putValue(unsigned char value)
+     ^
+main.c(79): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_putValue(unsigned char value)
+^
+static 
+main.c(116): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~ (1<<LCD_RS);    /* RS = 0 for command */
+                   ~~ ^~~~~~~~~~~~~
+main.c(114): warning: no previous prototype for function 'lcd_command' [-Wmissing-prototypes]
+void lcd_command(unsigned char cmd)
+     ^
+main.c(114): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_command(unsigned char cmd)
+^
+static 
+main.c(120): warning: no previous prototype for function 'lcd_data' [-Wmissing-prototypes]
+void lcd_data(unsigned char data)
+     ^
+main.c(120): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_data(unsigned char data)
+^
+static 
+main.c(126): warning: no previous prototype for function 'lcd_print' [-Wmissing-prototypes]
+void lcd_print(char * str)
+     ^
+main.c(126): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_print(char * str)
+^
+static 
+main.c(137): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void lcd_init()
+             ^
+              void
+main.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1<<LCD_EN);     /* LCD_EN = 0 */
+                   ~~ ^~~~~~~~~~~~
+main.c(137): warning: no previous prototype for function 'lcd_init' [-Wmissing-prototypes]
+void lcd_init()
+     ^
+main.c(137): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_init()
+^
+static 
+main.c(160): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void setup_RedPill()
+                  ^
+                   void
+main.c(184): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LCD_RS); // Turn off LED4
+                   ~~ ^~~~~~~~~~~~~~
+main.c(160): warning: no previous prototype for function 'setup_RedPill' [-Wmissing-prototypes]
+void setup_RedPill()
+     ^
+main.c(160): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void setup_RedPill()
+^
+static 
+main.c(192): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void ledsON()
+           ^
+            void
+main.c(195): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(197): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(199): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(201): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(203): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(205): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(207): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(209): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val01_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(192): warning: no previous prototype for function 'ledsON' [-Wmissing-prototypes]
+void ledsON()
+     ^
+main.c(192): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ledsON()
+^
+static 
+main.c(212): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void ledsOFF()
+            ^
+             void
+main.c(214): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LED1);    // led 1
+                   ~~ ^~~~~~~~~~~~
+main.c(215): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(216): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LED2);    // led 3
+                   ~~ ^~~~~~~~~~~~
+main.c(217): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(218): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LED3);    // led 3
+                   ~~ ^~~~~~~~~~~~
+main.c(219): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LCD_RS);  // led 4
+                   ~~ ^~~~~~~~~~~~~~
+main.c(221): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(222): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LED5);    // led 5
+                   ~~ ^~~~~~~~~~~~
+main.c(223): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(224): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LED6);    // led 6
+                   ~~ ^~~~~~~~~~~~
+main.c(225): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(226): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LED7);    // led 7
+                   ~~ ^~~~~~~~~~~~
+main.c(227): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(228): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(1 << LED8);    // led 8
+                   ~~ ^~~~~~~~~~~~
+main.c(229): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        delay(val02_delay);
+        ~~~~~ ^~~~~~~~~~~
+main.c(212): warning: no previous prototype for function 'ledsOFF' [-Wmissing-prototypes]
+void ledsOFF()
+     ^
+main.c(212): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ledsOFF()
+^
+static 
+main.c(240): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                delay(val01_delay);
+                ~~~~~ ^~~~~~~~~~~
+main.c(241): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOA->ODR &= ~(1 << LED1);    // led 1 - PA0
+                           ~~ ^~~~~~~~~~~~
+main.c(242): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                delay(val01_delay);
+                ~~~~~ ^~~~~~~~~~~
+main.c(235): warning: unused parameter 'argument' [-Wunused-parameter]
+void led_thread1(void const *argument)
+                             ^
+main.c(235): warning: no previous prototype for function 'led_thread1' [-Wmissing-prototypes]
+void led_thread1(void const *argument)
+     ^
+main.c(235): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void led_thread1(void const *argument)
+^
+static 
+main.c(236): warning: function 'led_thread1' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(254): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                delay(val02_delay);
+                ~~~~~ ^~~~~~~~~~~
+main.c(255): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOA->ODR &= ~(1 << LED2);    // led 2 - PA2
+                           ~~ ^~~~~~~~~~~~
+main.c(256): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                delay(val02_delay);
+                ~~~~~ ^~~~~~~~~~~
+main.c(249): warning: unused parameter 'argument' [-Wunused-parameter]
+void led_thread2(void const *argument)
+                             ^
+main.c(249): warning: no previous prototype for function 'led_thread2' [-Wmissing-prototypes]
+void led_thread2(void const *argument)
+     ^
+main.c(249): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void led_thread2(void const *argument)
+^
+static 
+main.c(250): warning: function 'led_thread2' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(259): warning: no previous extern declaration for non-static variable 'interrupcao' [-Wmissing-variable-declarations]
+int interrupcao = 0;
+    ^
+main.c(259): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int interrupcao = 0;
+^
+main.c(260): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void controle(){
+             ^
+              void
+main.c(260): warning: no previous prototype for function 'controle' [-Wmissing-prototypes]
+void controle(){
+     ^
+main.c(260): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void controle(){
+^
+static 
+main.c(301): warning: no previous extern declaration for non-static variable 'os_thread_def_led_thread1' [-Wmissing-variable-declarations]
+osThreadDef(led_thread1, osPriorityNormal, 1, 0);
+^
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(277): note: expanded from macro 'osThreadDef'
+const osThreadDef_t os_thread_def_##name = \
+                    ^
+<scratch space>(2): note: expanded from here
+os_thread_def_led_thread1
+^
+main.c(301): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(277): note: expanded from macro 'osThreadDef'
+const osThreadDef_t os_thread_def_##name = \
+      ^
+main.c(302): warning: no previous extern declaration for non-static variable 'os_thread_def_led_thread2' [-Wmissing-variable-declarations]
+osThreadDef(led_thread2, osPriorityNormal, 1, 0);
+^
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(277): note: expanded from macro 'osThreadDef'
+const osThreadDef_t os_thread_def_##name = \
+                    ^
+<scratch space>(3): note: expanded from here
+os_thread_def_led_thread2
+^
+main.c(302): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC\cmsis_os.h(277): note: expanded from macro 'osThreadDef'
+const osThreadDef_t os_thread_def_##name = \
+      ^
+main.c(300): warning: no previous extern declaration for non-static variable 'main_ID' [-Wmissing-variable-declarations]
+osThreadId main_ID, led_ID1, led_ID2; // create IDS
+           ^
+main.c(300): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+osThreadId main_ID, led_ID1, led_ID2; // create IDS
+^
+main.c(300): warning: no previous extern declaration for non-static variable 'led_ID1' [-Wmissing-variable-declarations]
+osThreadId main_ID, led_ID1, led_ID2; // create IDS
+                    ^
+main.c(300): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+osThreadId main_ID, led_ID1, led_ID2; // create IDS
+^
+main.c(300): warning: no previous extern declaration for non-static variable 'led_ID2' [-Wmissing-variable-declarations]
+osThreadId main_ID, led_ID1, led_ID2; // create IDS
+                             ^
+main.c(300): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+osThreadId main_ID, led_ID1, led_ID2; // create IDS
+^
+80 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=7604 RO-data=364 RW-data=52 ZI-data=3968  
+".\Objects\basePJ.axf" - 0 Error(s), 95 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: RTOS Version: 1.0.0
+   * Component: CORE Version: 5.6.0
+   * Component: Keil RTX Version: 4.82.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/gusta/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC
+  C:/Users/gusta/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS:1.0.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: ARM::CMSIS:RTOS:Keil RTX:4.82.0
+      Include file:  CMSIS/RTOS/RTX/UserCodeTemplates/osObjects.h
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/MsgQueue.c
+      Library file:  CMSIS/RTOS/RTX/LIB/ARM/RTX_CM3.lib
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Mutex.c
+      Include file:  CMSIS/RTOS/RTX/INC/cmsis_os.h
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/main.c
+      Source file:   CMSIS/RTOS/RTX/Templates/RTX_Conf_CM.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/MailQueue.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/MemPool.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Semaphore.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Thread.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Timer.c
+      Source file:   CMSIS/RTOS/RTX/SRC/ARM/SVC_Table.s
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/system_stm32f10x.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
